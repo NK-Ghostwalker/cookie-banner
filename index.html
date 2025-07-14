@@ -1,0 +1,27 @@
+<div id="cookie-banner" style="display:none; position: fixed; bottom: 0; left: 0; width: 100%; background: #232323; color: #fff; padding: 18px 12px 14px; z-index: 9999; box-shadow: 0 -2px 8px rgba(0,0,0,0.13); font-size: 16px;">
+  <span>
+    By continuing to use www.domainname.com you agree to the use of cookies. More information can be found in 
+    <a href="https://domainname.com/cookie/" target="_blank" rel="noopener" style="color: var(--e-global-color-0db4f03); text-decoration: underline;">
+      Cookie Policy
+    </a>.
+  </span>
+  <button id="cookie-accept" style="margin-left: 20px; padding: 8px 16px; background-color: white; color: #0a4412; border: none; border-radius: 4px; cursor: pointer;">
+    Принять
+  </button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var banner = document.getElementById("cookie-banner");
+  var button = document.getElementById("cookie-accept");
+
+  if (!localStorage.getItem("cookieAccepted")) {
+    banner.style.display = "block";
+  }
+
+  button.addEventListener("click", function() {
+    localStorage.setItem("cookieAccepted", "yes");
+    banner.style.display = "none";
+  });
+});
+</script>
