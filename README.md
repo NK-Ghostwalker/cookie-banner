@@ -6,7 +6,7 @@ A simple and lightweight JavaScript cookie banner. No external dependencies, per
 
 - Pure HTML, CSS, and JS
 - `localStorage` consent handling
-- Translatable (English/Russian)
+- Translatable (English)
 - Responsive and clean design
 
 ## 💻 Preview
